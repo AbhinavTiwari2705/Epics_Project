@@ -3,28 +3,12 @@ const { isEmail } = require("validator");
 const bcrypt = require('bcrypt');
 
 const userSchema = new mongoose.Schema({
-  username: {
-    type: String,
-    required: true,
-    unique: true,
-  },
-  firstname: {
-    type: String,
-    required: true,
-  },
-  lastname: {
-    type: String,
-    required: true,
-  },
-  aadharcard: {
-    type: String,
-    required: true,
-    unique: true,
-  },
-  dob: {
-    type: Date,
-    required: true,
-  },
+  // Existing fields
+  username: { type: String, required: true, unique: true },
+  firstname: { type: String, required: true },
+  lastname: { type: String, required: true },
+  aadharcard: { type: String, required: true, unique: true },
+  dob: { type: Date, required: true },
   address: {
     houseno: String,
     street: String,
@@ -54,31 +38,18 @@ const userSchema = new mongoose.Schema({
       message: props => `Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number.`
     }
   },
+  // // New messaging-related fields
+  // messagesSent: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Message' }],
+  // messagesReceived: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Message' }]
 });
 
 const helperSchema = new mongoose.Schema({
-  username: {
-    type: String,
-    required: true,
-    unique: true,
-  },
-  firstname: {
-    type: String,
-    required: true,
-  },
-  lastname: {
-    type: String,
-    required: true,
-  },
-  aadharcard: {
-    type: String,
-    required: true,
-    unique: true,
-  },
-  dob: {
-    type: Date,
-    required: true,
-  },
+  // Existing fields
+  username: { type: String, required: true, unique: true },
+  firstname: { type: String, required: true },
+  lastname: { type: String, required: true },
+  aadharcard: { type: String, required: true, unique: true },
+  dob: { type: Date, required: true },
   address: {
     houseno: String,
     street: String,
@@ -87,7 +58,6 @@ const helperSchema = new mongoose.Schema({
     country: String,
     pincode: String,
   },
-  
   email: {
     type: String,
     required: [true, "Please enter an email"],
@@ -109,20 +79,17 @@ const helperSchema = new mongoose.Schema({
       message: props => `Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one number.`
     }
   },
-  rating: {
-    type: Number,
-    default: 0,
-  },
+  rating: { type: Number, default: 0 },
   comments: [
     {
       content: String,
       author: String,
-      datetime: {
-        type: Date,
-        default: Date.now,
-      },
-    },
+      datetime: { type: Date, default: Date.now }
+    }
   ],
+  // New messaging-related fields
+  // messagesSent: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Message' }],
+  // messagesReceived: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Message' }]
 });
 
 // Hash password before saving for user

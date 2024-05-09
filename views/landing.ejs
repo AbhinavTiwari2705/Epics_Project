@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuva Anubhav</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Yuva Anubhav</div>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li id="chatbot-link"><a href="/chatbot">Chatbot</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Yuva Anubhav</h1>
+                <p class="italic">Where digital empowerment knows no age limits</p>
+                <div class="intro">
+                    <p>Yuva Anubhav – your saarthi in digital empowerment for seniors. At Yuva Anubhav, we are dedicated
+                        to bridging the digital divide by providing essential technology skills and unwavering support
+                        to senior citizens. Our mission is simple yet profound: to empower seniors to navigate the
+                        digital world confidently, improving their quality of life and fostering a more connected,
+                        inclusive community.</p>
+                    <p>Get quick and effective responses for your tech worries with Saarthi : your new assistant for tech worries!</p>
+                    
+                    <p>Join us to become a volunteer or get your queries answered one-on-one! Download the app now!</p>
+                </div>
+                <div class="buttons">
+                    <a href="utils/app-release.apk" download id="apk-btn">
+                        <button><i class="fas fa-download"></i> Download APK</button>
+                    </a>
+
+                    <a href="/chatbot"><button id="chatbot-btn"><i class="fas fa-robot"></i> Chatbot</button></a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- <img src="Yuva Anubhav.jpg" alt="Yuva Anubhav"> -->
+                <!-- <div id="chat-container">
+            <h1>Yuvaanubhav Chatbot</h1>
+            <div id="chat-history"></div>
+            <form id="chat-form">
+                <input type="text" id="user-input" placeholder="Enter your message">
+                <button type="submit">Send</button>
+            </form>
+        </div> -->
+                <div id="loader">
+                    <img src="/logo.jpg" width="550px" alt="Loading...">
+                
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; Yuva Anubhav</p>
+    </footer>
+    <!-- Chatbot Window -->
+    <!-- <div id="chatbot-window" class="chatbot-window">
+        <div class="chatbot-header">
+            <h3>Chatbot</h3>
+            <button class="close-btn">&times;</button>
+        </div>
+        <div class="chatbot-messages"></div>
+        <div class="chatbot-input">
+            <input type="text" placeholder="Type your message...">
+            <button class="send-btn">Send</button>
+        </div>
+    </div> -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
